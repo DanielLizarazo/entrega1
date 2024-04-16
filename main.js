@@ -19,43 +19,92 @@ function vueltas(total, dinero) {
     cambio = (dinero - total)
 };
 
-do {
-    const pedido = parseInt(prompt("Hola este es nuestro menu, selecciona la opcion\n" + menu + "\nRecuerda que los combos tienen descuento, que quieres pedir"));
-    const cantidad = parseInt(prompt("Cuantos de estos quieres?"));   
+ do {
+     const pedido = parseInt(prompt("Hola este es nuestro menu, selecciona la opcion\n" + menu + "\nRecuerda que los combos tienen descuento, que quieres pedir"));
+       
   
-     if (pedido == 1)  {
-         operacion(hamburguesaSencilla, cantidad);
+      if (pedido == 1)  {
+          const cantidad = parseInt(prompt("Cuantos de estos quieres?"));
+          operacion(hamburguesaSencilla, cantidad);
+          const dinero = parseInt(prompt("el total es $" + total + "\nCon cuanto pagas? "));
+          vueltas(total, dinero);
+          if (dinero < total) {
+            alert("no te alcanza, vete")
+        } else {
+            alert("tu cambio es $" + cambio)
+        }; 
        
-     } else if (pedido == 2) {
-         operacion(hamburguesaDoble, cantidad);
+      } else if (pedido == 2) {
+          const cantidad = parseInt(prompt("Cuantos de estos quieres?"));
+          operacion(hamburguesaDoble, cantidad);
+          const dinero = parseInt(prompt("el total es $" + total + "\nCon cuanto pagas? "));
+          vueltas(total, dinero);
+          if (dinero < total) {
+            alert("no te alcanza, vete")
+        } else {
+            alert("tu cambio es $" + cambio)
+        }; 
     
-     } else if (pedido == 3){
-         operacion(papas, cantidad);
+      } else if (pedido == 3){
+          const cantidad = parseInt(prompt("Cuantos de estos quieres?"));
+          operacion(papas, cantidad);
+          const dinero = parseInt(prompt("el total es $" + total + "\nCon cuanto pagas? "));
+          vueltas(total, dinero);
+          if (dinero < total) {
+            alert("no te alcanza, vete")
+        } else {
+            alert("tu cambio es $" + cambio + "\n Disfruta tu comida :)")
+        }; 
        
-     } else if (pedido == 4){
-         operacion(gaseosa, cantidad);  
+      } else if (pedido == 4){
+          const cantidad = parseInt(prompt("Cuantos de estos quieres?"));
+          operacion(gaseosa, cantidad); 
+          const dinero = parseInt(prompt("el total es $" + total + "\nCon cuanto pagas? "));
+          vueltas(total, dinero);
+          if (dinero < total) {
+            alert("no te alcanza, vete")
+        } else {
+            alert("tu cambio es $" + cambio + "\n Disfruta tu comida :)")
+        }; 
         
-     } else if (pedido == 5){
-         operacion(combo1 , cantidad);
+      } else if (pedido == 5){
+          const cantidad = parseInt(prompt("Cuantos de estos quieres?"));
+          operacion(combo1 , cantidad);
+          const dinero = parseInt(prompt("el total es $" + total + "\nCon cuanto pagas? "));
+          vueltas(total, dinero);
+          if (dinero < total) {
+            alert("no te alcanza, vete")
+        } else {
+            alert("tu cambio es $" + cambio + "\n Disfruta tu comida :)")
+        }; 
       
-     } else if (pedido == 6){
-         operacion(combo2, cantidad);
+      } else if (pedido == 6){
+          const cantidad = parseInt(prompt("Cuantos de estos quieres?"));
+          operacion(combo2, cantidad);
+          const dinero = parseInt(prompt("el total es $" + total + "\nCon cuanto pagas? "));
+          vueltas(total, dinero);
+          if (dinero < total) {
+            alert("no te alcanza, vete")
+        } else {
+            alert("tu cambio es $" + cambio + "\n Disfruta tu comida :)")
+        }; 
         
-     } else if(pedido == 7){
-         operacion(combo3, cantidad);
-     } else {}
-     const dinero = parseInt(prompt("el total es " + total + "\nCon cuanto pagas? "));
-     vueltas(total, dinero);
-     if (dinero < total) {
-         alert("no te alcanza, vete")
-     } else {
-         alert("tu cambio es " + cambio)
-     }; 
-     if(pedido > 7 || pedido == isNaN) {
-        alert(pedirMas);
-     }
+      } else if(pedido == 7){
+          const cantidad = parseInt(prompt("Cuantos de estos quieres?"));
+          operacion(combo3, cantidad);
+          const dinero = parseInt(prompt("el total es $" + total + "\nCon cuanto pagas? "));
+          vueltas(total, dinero);
+          if (dinero < total) {
+            alert("no te alcanza, vete")
+        } else {
+            alert("tu cambio es $" + cambio + "\n Disfruta tu comida :)")
+        }; 
+        } else if (pedido > 8 || pedido == isNaN) {
+            alert("elige una opcion valida")
+        };
 
-     pedirMas = confirm("quieres otra cosa?")
-    } while (pedirMas);
+      pedirMas = confirm("quieres otra cosa?")
+     } while (pedirMas);
+
 
   
